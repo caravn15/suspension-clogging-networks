@@ -149,42 +149,28 @@ elseif strcmp(fnOg,'fig_S1')
     oldPrefix = 'fig_S1';
     newPrefix = 'fig_3';
 
-elseif strcmp(fnOg,'fig_S3')
-
-    sourceDir = 'data/sims/supp-mat-results';
-    destDir   = 'data/sims/supp-mat-results';
-
-    oldPrefix = 'fig_S3';
-    newPrefix = 'fig_S6';
-
-elseif strcmp(fnOg,'fig_S6')
-
-    sourceDir = 'data/sims/supp-mat-results';
-    destDir   = 'data/sims/supp-mat-results';
-
-    oldPrefix = 'fig_S6';
-    newPrefix = 'fig_S3';
-
 else
-    error('Unknown value of fn: %s', fnOg);
 end
 
-% create destination folder if it doesn't exist
-if ~exist(destDir, 'dir')
-    mkdir(destDir);
-end
+try
+    % create destination folder if it doesn't exist
+    if ~exist(destDir, 'dir')
+        mkdir(destDir);
+    end
 
-% find relevant files
-files = dir(fullfile(sourceDir, [oldPrefix '*']));
-files = files(~[files.isdir]);
+    % find relevant files
+    files = dir(fullfile(sourceDir, [oldPrefix '*']));
+    files = files(~[files.isdir]);
 
-% copy and rename
-for k = 1:numel(files)
-    oldName = files(k).name;
-    newName = strrep(oldName, oldPrefix, newPrefix);
+    % copy and rename
+    for k = 1:numel(files)
+        oldName = files(k).name;
+        newName = strrep(oldName, oldPrefix, newPrefix);
 
-    copyfile(fullfile(sourceDir, oldName), ...
-        fullfile(destDir, newName));
+        copyfile(fullfile(sourceDir, oldName), ...
+            fullfile(destDir, newName));
+    end
+catch
 end
 
 end

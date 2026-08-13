@@ -32,7 +32,7 @@ NumDiv        = 100;                      % number of R grid points for R_4,8 an
 OutputCW      = 0;                        % output full solver details in the command window (set =0 if not required)
 PlotMotifs    = 1;                        % if =1, plots motifs with green/orange/red vessel states (set =0 if not required)
 DataLoad      = {};
-DataLoad      = {'fig_S5_Da_0.001_phin_0.44_phm_0.65'};
+% DataLoad      = {'fig_S5_Da_0.001_phin_0.44_phm_0.65'};
 
 % For DataLoad, set as empty {} to run solve + plot, or provide path to sim. data in fld to skip solve
 % Data format: cell e.g. {'fig_S5_Da_0.001_phin_0.44_phm_0.65'}

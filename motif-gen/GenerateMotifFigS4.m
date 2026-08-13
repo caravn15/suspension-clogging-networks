@@ -72,11 +72,4 @@ catch
     save('data/net/motif-fig-S4/data_net_motif.mat','net');
 end
 
-try
-    save('data/net/motif-fig-S7/data_net_motif.mat','net');
-catch
-    mkdir('data/net/motif-fig-S7');
-    save('data/net/motif-fig-S7/data_net_motif.mat','net');
-end
-
 end

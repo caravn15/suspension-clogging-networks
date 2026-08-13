@@ -35,7 +35,7 @@ SqueezeData   = 1;                        % =0 to save all data (solutions at al
 % other options
 OutputCW      = 1;                        % output full solver details in the command window (set =0 if not wanted)
 DataLoad      = {};         
-DataLoad      = {'fig_S6_Da_1e-05_phin_0.36_phm_0.65','fig_S6_Da_1e-05_phin_0.36_phm_1'};
+% DataLoad      = {'fig_S6_Da_1e-05_phin_0.36_phm_0.65','fig_S6_Da_1e-05_phin_0.36_phm_1'};
 
 % For DataLoad, set as empty {} to run solve + plot, or provide path to sim. data in fld to skip solve
 % Data format: cell e.g. {'fig_S6_Da_1e-05_phin_0.36_phm_0.65','fig_S6_Da_1e-05_phin_0.36_phm_1'}

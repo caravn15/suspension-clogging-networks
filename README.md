@@ -35,10 +35,8 @@ These scripts generate results for Figures 3–6 of the main manuscript.
 - `sc_supp_mat_fig_S4`
 - `sc_supp_mat_fig_S5`
 - `sc_supp_mat_fig_S6`
-- `sc_supp_mat_fig_S7`
-- `sc_supp_mat_fig_S8`
 
-These scripts generate results for Figures S1–S8 of the supplementary material.
+These scripts generate results for Figures S1–S6 of the supplementary material.
 
 ## Typical usage
 

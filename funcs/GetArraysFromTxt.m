@@ -2,7 +2,7 @@ function net = GetArraysFromTxt(Netfld)
 
 % VertexCoordinates
 try
-    fileID                = fopen([Netfld,'data_VertexCoordinates.txt'],'r');
+    fileID                = fopen(['data/net/',Netfld,'data_VertexCoordinates.txt'],'r');
     formatSpec            = '%f %f %f';
     sizeA                 = [3 Inf];
     net.VertexCoordinates = fscanf(fileID,formatSpec,sizeA);
@@ -14,7 +14,7 @@ end
 
 % EdgeConnectivity
 try
-    fileID               = fopen([Netfld,'data_EdgeConnectivity.txt'],'r');
+    fileID               = fopen(['data/net/',Netfld,'data_EdgeConnectivity.txt'],'r');
     formatSpec           = '%d %d';
     sizeA                = [2 Inf];
     net.EdgeConnectivity = fscanf(fileID,formatSpec,sizeA);
@@ -26,7 +26,7 @@ end
 
 % EdgePointCoordinates
 try
-    fileID                   = fopen([Netfld,'data_EdgePointCoordinates.txt'],'r');
+    fileID                   = fopen(['data/net/',Netfld,'data_EdgePointCoordinates.txt'],'r');
     formatSpec               = '%f %f %f';
     sizeA                    = [3 Inf];
     net.EdgePointCoordinates = fscanf(fileID,formatSpec,sizeA);
@@ -38,7 +38,7 @@ end
 
 % Radii
 try
-    fileID     = fopen([Netfld,'data_Radii.txt'],'r');
+    fileID     = fopen(['data/net/',Netfld,'data_Radii.txt'],'r');
     formatSpec = '%f';
     sizeA      = [1 Inf];
     net.Radii  = fscanf(fileID,formatSpec,sizeA);
@@ -50,7 +50,7 @@ end
 
 % VesselType
 try
-    fileID        = fopen([Netfld,'data_VesselType.txt'],'r');
+    fileID        = fopen(['data/net/',Netfld,'data_VesselType.txt'],'r');
     formatSpec     = '%f';
     sizeA          = [1 Inf];
     net.VesselType = fscanf(fileID,formatSpec,sizeA);

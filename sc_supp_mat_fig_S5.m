@@ -76,8 +76,14 @@ R48_v          = R48_M(:);
 R910_v         = R910_M(:);
 
 % sort solution to plot
-SolNumConst = reshape(sol.nMax(:)+sol.nClog(:),[NumDiv,NumDiv]);
-SolChange   = SolNumConst-SolNumConst(end,:);
+SolNumConst    = reshape(sol.nMax(:)+sol.nClog(:),[NumDiv,NumDiv]);
+
+% baseline case (technically when R_9,10=0.001 but this is exactly the same
+% value as if R_9,10=0 without having to run extra simulations for the no-bypass case)
+SolNumNoBypass = SolNumConst(end,:); 
+
+% change in number of constrained vessels
+SolChange      = SolNumConst-SolNumNoBypass;
 
 % create colormap
 rgb = [5 48 97; 126 148 172; 230 230 230; 230 200 200; 213 153 153; 196 106 106; 179 70 70; 141 35 35; 103 0 31] / 255;

@@ -1,7 +1,4 @@
-function [F,iMax,iClog] = UpstreamCorrection(net,Q,FMax,IndInlet,Fin,F,iMax,iClog,PressOrderClogs)
-
-% save original solid flux
-Fog = F;
+function [F,iMax,iClog] = UpstreamCorrection(net,Q,FMax,IndInlet,Fin,iMax,iClog,PressOrderClogs)
 
 % initialize new solid flux
 F = NaN*ones(net.NumEdges,1);
@@ -37,14 +34,14 @@ for kk=1:length(PressOrderClogs)
         % two incoming vessels
 
         if isscalar(IndsOut)
+
             % one outgoing vessel
 
-            FogIn1    = Fog(IndsIn(1));
-            FogInMax1 = FMax(IndsIn(1));
+            FogInMax1    = FMax(IndsIn(1));
             FogInMax2 = FMax(IndsIn(2));
 
             % backwards splitting law
-            [~,iSplit] = min([Q(IndsIn(1))/Q(IndsOut),FogIn1/F(IndsOut)]);
+            [~,iSplit] = min([Q(IndsIn(1))/Q(IndsOut),FogInMax1/F(IndsOut)]);
 
             % transform indicator to 0 or 1
             iSplit     = iSplit - 1;
@@ -65,10 +62,10 @@ for kk=1:length(PressOrderClogs)
                     F(IndsIn(1))    =  F(IndsOut) - F(IndsIn(2));
 
                     % check edge IndsOut(1) can accommodate prescribed flux
-                    if F(IndsIn(1)) >= FogIn1
+                    if F(IndsIn(1)) >= FogInMax1
 
                         % flux too high -> set F to max
-                        F(IndsIn(1))    = FogIn1;
+                        F(IndsIn(1))    = FogInMax1;
                     end
                 end
             else

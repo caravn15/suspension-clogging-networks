@@ -50,7 +50,7 @@ while true
 
         % perform upstream correction in clogged vessels with ordering of
         % nodes/junctions considered given by PressOrderClogs (step D in algorithm)
-        [F,iMaxIt(:,ii+1),iClogIt(:,ii+1)] = UpstreamCorrection(net,Q,FMax,IndInlet,Fin,F,iMaxIt(:,ii+1),iClogIt(:,ii+1),PressOrderClogs);
+        [F,iMaxIt(:,ii+1),iClogIt(:,ii+1)] = UpstreamCorrection(net,Q,FMax,IndInlet,Fin,iMaxIt(:,ii+1),iClogIt(:,ii+1),PressOrderClogs);
 
         % increase iteration counter
         ii = ii + 1;

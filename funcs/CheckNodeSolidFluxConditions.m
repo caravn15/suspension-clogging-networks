@@ -33,9 +33,7 @@ for ii=1:net.NumPress
                 if iClog(IndsOut) == 1 || iMax(IndsOut) == 1
                     % backwards splitting
                     NodeCond(ii)     = 2;
-                    FIn1             = F(IndsOut)*abs(Q(IndsIn(1)))/abs(Q(IndsOut));
-                    FIn2             = F(IndsOut)*abs(Q(IndsIn(2)))/abs(Q(IndsOut));
-                    ErrBackSplit(ii) = FIn1 + FIn2 - F(IndsOut);
+                    ErrBackSplit(ii) = F(IndsIn(1)) + F(IndsIn(2)) - F(IndsOut);
                 else
                     % mass balance
                     NodeCond(ii)   = 0;
@@ -50,9 +48,7 @@ for ii=1:net.NumPress
             if sum([iMax(IndsIn);iMax(IndsOut);iClog(IndsIn);iClog(IndsOut)]) == 0
                 % splitting law
                 NodeCond(ii)   = 1;
-                FOut1          = F(IndsIn)*abs(Q(IndsOut(1)))/abs(Q(IndsIn));
-                FOut2          = F(IndsIn)*abs(Q(IndsOut(2)))/abs(Q(IndsIn));
-                ErrSplit(ii)   = F(IndsIn) - FOut1 - FOut2;
+                ErrSplit(ii)   = F(IndsIn) - F(IndsOut(1)) - F(IndsOut(2));
             else
                 % mass balance
                 NodeCond(ii)   = 0;

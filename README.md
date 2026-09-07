@@ -8,8 +8,6 @@ MATLAB code accompanying the paper:
 ## Requirements
 
 - **MATLAB** (tested in version **2025a**)
-- No additional third-party MATLAB toolboxes are required beyond the files included in this repository.
-- The repository includes two third-party helper functions, `parseArgs` and `subaxis`, which are copyrighted by **© 2001–2014 Aslak Grinsted** and are free to modify. Their copyright and permission details are documented in the headers of those files.
 
 ## Repository outputs
 

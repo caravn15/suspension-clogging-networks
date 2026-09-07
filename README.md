@@ -8,6 +8,8 @@ MATLAB code accompanying the paper:
 ## Requirements
 
 - **MATLAB** (tested in version **2025a**)
+- No additional third-party MATLAB toolboxes are required beyond the files included in this repository.
+- The repository includes two third-party helper functions, `parseArgs` and `subaxis`, which are copyrighted by **© 2001–2014 Aslak Grinsted** and are free to modify. Their copyright and permission details are documented in the headers of those files.
 
 ## Repository outputs
 
@@ -40,12 +42,12 @@ These scripts generate results for Figures S1–S6 of the supplementary material
 
 ## Network data
 
-The network data for Figure 6 and Supplementary Figure 6 was generated according to the paper:
+The network data for Figure 6 and Supplementary Figure 6 were generated according to the paper:
 
 **Brown, E. E., Guy, A. A., Holroyd, N. A., Sweeney, P. W., Gourmet, L., Coleman, H., Walsh, C., Markaki, A. E., Shipley, R., Rajendram, R., & Walker-Samuel, S.**  
 *Physics-informed deep generative learning for quantitative assessment of the retina*
 
-The network was generated using RetinaGen within [RetinaSim](https://github.com/simonwalkersamuel/retinasim). The resultant data file `19_graph_250_vein_7_a2v.am` is contained within the folder `net/Brown-et-al-retina/`. This file was then converted into several text files (located in the same folder) in order to be read by MATLAB.
+The networks were generated using RetinaGen within [RetinaSim](https://github.com/simonwalkersamuel/retinasim). The original data file `19_graph_250_vein_7_a2v.am` is contained within the folder `net/Brown-et-al-retina/`. The extracted network information used for the simulations is contained in the other text files in the same data folder.
 
 ## Typical usage
 

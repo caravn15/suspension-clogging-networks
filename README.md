@@ -45,7 +45,7 @@ The network data for Figure 6 and Supplementary Figure 6 were generated accordin
 **Brown, E. E., Guy, A. A., Holroyd, N. A., Sweeney, P. W., Gourmet, L., Coleman, H., Walsh, C., Markaki, A. E., Shipley, R., Rajendram, R., & Walker-Samuel, S.**  
 *Physics-informed deep generative learning for quantitative assessment of the retina*
 
-The networks were generated using RetinaGen within [RetinaSim](https://github.com/simonwalkersamuel/retinasim). The original data file is `19_graph_250_vein_7_a2v.am`, and the extracted network information used for the simulations is contained in the other text files in the same data folder.
+The networks were generated using RetinaGen within [RetinaSim](https://github.com/simonwalkersamuel/retinasim). The original data file `19_graph_250_vein_7_a2v.am` is contained within the folder `net/Brown-et-al-retina/`. The extracted network information used for the simulations is contained in the other text files in the same data folder.
 
 ## Typical usage
 

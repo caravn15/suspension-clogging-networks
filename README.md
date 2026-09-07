@@ -38,6 +38,15 @@ These scripts generate results for Figures 3–6 of the main manuscript.
 
 These scripts generate results for Figures S1–S6 of the supplementary material.
 
+## Network data
+
+The network data for Figure 6 and Supplementary Figure 6 were generated according to the paper:
+
+**Brown, E. E., Guy, A. A., Holroyd, N. A., Sweeney, P. W., Gourmet, L., Coleman, H., Walsh, C., Markaki, A. E., Shipley, R., Rajendram, R., & Walker-Samuel, S.**  
+*Physics-informed deep generative learning for quantitative assessment of the retina*
+
+The networks were generated using RetinaGen within [RetinaSim](https://github.com/simonwalkersamuel/retinasim). The original data file is `19_graph_250_vein_7_a2v.am`, and the extracted network information used for the simulations is contained in the other text files in the same data folder.
+
 ## Typical usage
 
 1. Clone the repository:
